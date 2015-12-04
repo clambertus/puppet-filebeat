@@ -8,6 +8,7 @@ class filebeat::params {
   $registry_file  = '.filebeat'
   $config_dir     = '/etc/filebeat/conf.d'
   $outputs        = {}
+  $tls            = {}
   $shipper        = {}
   $logging        = {}
 }

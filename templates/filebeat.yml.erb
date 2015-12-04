@@ -6,6 +6,11 @@ filebeat:
   registry_file: <%= @registry_file %>
   config_dir: <%= @config_dir %>
 
+<%- if @tls -%>
+tls:
+<%= YAML.dump(@tls).gsub(/---|\s\n/, "---" => '', " \n" => "\n" ) -%>
+<%- end -%>
+
 <%- if @outputs -%>
 output:
 <%= YAML.dump(@outputs).gsub(/---|\s\n/, "---" => '', " \n" => "\n" ) -%>

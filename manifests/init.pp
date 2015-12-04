@@ -34,6 +34,7 @@ class filebeat (
   $registry_file  = $filebeat::params::registry_file,
   $config_dir     = $filebeat::params::config_dir,
   $outputs        = $filebeat::params::outputs,
+  $tls            = $filebeat::params::tls,
   $shipper        = $filebeat::params::shipper,
   $logging        = $filebeat::params::logging,
   $prospectors    = {},
